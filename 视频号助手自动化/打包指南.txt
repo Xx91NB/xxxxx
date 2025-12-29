@@ -1,0 +1,32 @@
+如何打包成安装包：
+================================
+
+1. 创建ZIP压缩包：
+   视频号助手自动化.zip
+   ├── 【01_一键安装】install.bat
+   ├── 【02_一键启动】start_system.bat
+   ├── 【03_单独测试】test_click.bat
+   ├── 【04_获取坐标】capture_coords.bat
+   ├── 【05_卸载清理】uninstall.bat
+   ├── scripts/
+   │   ├── shadow_ready.py
+   │   ├── live_listener.py
+   │   └── requirements.txt
+   └── docs/
+       ├── 使用说明.txt
+       └── 故障排除.txt
+
+2. 在其他电脑安装：
+   • 解压ZIP到任意目录
+   • 双击运行 【01_一键安装】install.bat
+   • 按照提示完成安装
+
+3. 首次使用：
+   • 运行 【04_获取坐标】capture_coords.bat 获取按钮坐标
+   • 配置影刀RPA流程
+   • 运行 【02_一键启动】start_system.bat
+
+4. 更新维护：
+   • 坐标变化：重新运行capture_coords.bat
+   • 更新脚本：替换scripts目录文件
+   • 完全重装：运行uninstall.bat后重新安装

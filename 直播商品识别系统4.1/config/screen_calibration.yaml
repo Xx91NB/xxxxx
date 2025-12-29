@@ -1,0 +1,8 @@
+screen_capture:
+  calibrated_at: '2025-12-29 22:16:31'
+  method: mss
+  region:
+    height: 660
+    width: 558
+    x: 103
+    y: 113

@@ -1,0 +1,21 @@
+System Log 日志 (已清空)
+==================================================
+清空时间: 2025-12-29 11:10:26
+==================================================
+
+[2025-12-29 11:10:51] [INFO] [ScreenRecognition] 系统初始化开始
+[2025-12-29 11:10:52] [INFO] [ScreenRecognition] 系统初始化完成
+[2025-12-29 11:10:52] [INFO] [ScreenRecognition] 启动屏幕识别系统
+[2025-12-29 11:10:52] [INFO] [_load_templates] 加载了 5 个模板
+[2025-12-29 11:10:57] [INFO] [ScreenRecognition] 开始屏幕区域校准
+[2025-12-29 11:11:06] [INFO] [ScreenRecognition] 屏幕区域校准完成
+[2025-12-29 11:11:13] [INFO] [ScreenRecognition] 进入识别设置
+[2025-12-29 11:11:25] [WARNING] [recognition_settings] 置信度必须在0.1-0.9之间
+[2025-12-29 11:11:32] [INFO] [recognition_settings] 最小置信度已设置为: 0.6
+[2025-12-29 11:11:44] [INFO] [recognition_settings] 帧率已设置为: 30 FPS
+[2025-12-29 11:11:47] [INFO] [_save_config] 配置已保存: config\screen_config.yaml
+[2025-12-29 11:11:47] [INFO] [recognition_settings] 设置已保存并应用
+[2025-12-29 11:11:51] [INFO] [ScreenRecognition] 开始屏幕识别
+[2025-12-29 11:12:38] [INFO] [start_recognition] 识别被用户中断
+[2025-12-29 11:12:38] [INFO] [_show_recognition_stats] 识别时长: 47.6秒, 总帧数: 971, 匹配帧数: 0, 匹配率: 0.0%
+[2025-12-29 11:12:38] [INFO] [ScreenRecognition] 屏幕识别结束

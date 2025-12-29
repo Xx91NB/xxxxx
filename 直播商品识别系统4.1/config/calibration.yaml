@@ -1,0 +1,9 @@
+calibration:
+  timestamp: '2025-12-29'
+  version: '1.0'
+screen:
+  region:
+    height: 868
+    width: 848
+    x: 1532
+    y: 497

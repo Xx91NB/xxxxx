@@ -1,0 +1,12 @@
+# 图像模式配置
+extends: "default.yaml"
+
+matcher:
+  mode: "image"
+  
+  image:
+    min_matches: 10
+    match_ratio: 0.8
+
+system:
+  description: "纯图像识别模式"

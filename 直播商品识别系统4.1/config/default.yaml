@@ -1,0 +1,103 @@
+project:
+  name: "直播商品识别系统"
+  version: "4.0"
+  description: "基于计算机视觉的智能商品识别系统"
+  
+system:
+  default_mode: "hybrid"
+  auto_save: true
+  auto_save_interval: 300
+  max_log_files: 10
+  debug_mode: false
+  
+  learning:
+    enabled: true
+    min_samples: 3
+    max_samples: 50
+    confidence_threshold: 0.7
+  
+paths:
+  root: "."
+  data: "./data"
+  outputs: "./outputs"
+  config: "./config"
+  models: "./models"
+  
+  materials:
+    images: "./data/images_material"
+    videos: "./data/videos_material"
+  
+  inputs:
+    images: "./data/images"
+    videos: "./data/videos"
+    camera: "0"
+    
+  outputs:
+    results: "./outputs/results"
+    screenshots: "./outputs/screenshots"
+    logs: "./outputs/logs"
+    reports: "./outputs/reports"
+
+detector:
+  model_type: "haar"  # haar, yolo, custom
+  confidence_threshold: 0.5
+  min_object_size: 30
+  max_object_size: 800
+  
+  classes:
+    - "product"
+    - "package"
+    - "label"
+
+matcher:
+  mode: "hybrid"  # hybrid, image, video
+  
+  image:
+    feature_type: "orb"
+    match_ratio: 0.75
+    min_matches: 8
+    use_flann: true
+    
+  video:
+    frame_interval: 1
+    min_confidence: 0.3
+    detection_interval: 0.5
+  
+  advanced:
+    use_color_histogram: true
+    use_texture_features: false
+    color_weight: 0.3
+    feature_weight: 0.7
+
+video:
+  sources:
+    camera: true
+    file: true
+    screen: false
+    rtsp: false
+    
+  processing:
+    frame_rate: 10
+    resolution: [1280, 720]
+    denoise: true
+    stabilize: false
+
+ui:
+  theme: "dark"
+  language: "zh_CN"
+  show_fps: true
+  show_confidence: true
+  show_debug_info: false
+  
+  window:
+    width: 1280
+    height: 720
+    fullscreen: false
+    always_on_top: false
+
+logging:
+  level: "INFO"
+  console: true
+  file: true
+  max_file_size_mb: 10
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"

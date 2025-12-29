@@ -1,0 +1,13 @@
+# 视频模式配置
+extends: "default.yaml"
+
+matcher:
+  mode: "video"
+  
+  video:
+    frame_interval: 1
+    min_confidence: 0.4
+    detection_interval: 0.3
+
+system:
+  description: "纯视频识别模式"

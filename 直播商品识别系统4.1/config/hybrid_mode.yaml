@@ -1,0 +1,16 @@
+# 混合模式配置
+extends: "default.yaml"
+
+matcher:
+  mode: "hybrid"
+  primary_method: "image"
+  fallback_to_video: true
+  
+  image:
+    min_matches: 6
+    
+  video:
+    min_confidence: 0.25
+
+system:
+  description: "图像+视频混合识别模式"

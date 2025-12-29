@@ -1,0 +1,18 @@
+output:
+  max_saves_per_item: 10
+  save_dir: outputs/screen_matches
+  save_format: jpg
+recognition:
+  auto_learn: true
+  match_interval: 2.0
+  min_confidence: 0.6
+  save_matches: true
+screen:
+  auto_calibrate: true
+  capture_method: mss
+  fps: 30
+  region: !!python/tuple
+  - 103
+  - 113
+  - 558
+  - 660
